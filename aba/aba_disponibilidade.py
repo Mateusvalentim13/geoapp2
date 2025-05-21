@@ -25,8 +25,8 @@ def exibir(dfs_por_arquivo, limiar_variacao):
         st.markdown(f"### 📄 Arquivo: `{nome_arquivo}`")
         st.table(pd.DataFrame({
             "Total Leituras": [total_linhas * len(col_digitais)],
-            "Falhas (-999 ou -998)": [total_lacunas],
-            "Disponibilidade (%)": [f"{disponibilidade:.2f}%" if total_linhas > 0 else "N/A"]
+            "Falhas": [total_lacunas],
+            "Disponibilidade": [f"{disponibilidade:.2f}%" if total_linhas > 0 else "N/A"]
         }))
 
         # Por instrumento
